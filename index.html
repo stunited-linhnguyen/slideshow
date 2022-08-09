@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Siler</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&display=swap" rel="stylesheet"></head>
+
+</head>
+<body>
+    <!-- image silder start -->
+    <header class="">
+        <section class="header">
+            <div class="header-center">
+                <div class="logo">
+                    <img src="./image//slideshow/stunited-e15650013362301.png" alt="STUnited" width="150px"
+                        height="100px">
+                </div>
+                <div class="main-menu">
+                    <ul class="menu">
+                        <li><a>Home</a></li>
+                        <li><a>What we do</a></li>
+                        <a>
+                            <li>Who we are</li>
+                        </a>
+                        <li><a>Portfolio</a></li>
+                        <li><a>Join us</a></li>
+                        <li><a>Let'stalk</a></li>
+                    </ul>
+                </div>
+    
+            </div>
+            <div class="text-box">
+                <a class="btn">Collaborate to kick-start your software project</a>
+            </div>
+
+        </section>
+        <section class="slide-show">
+            <div class="slider">
+                <div class="slides">
+                    <!-- radio buttons start -->
+                    <input type="radio" id="radio1" name="radio-btn">
+                    <input type="radio" id="radio2" name="radio-btn">
+                    <input type="radio" id="radio3" name="radio-btn">
+                    <input type="radio" id="radio4" name="radio-btn">
+                    <!-- radio buttons end -->
+                    <!-- slide image start -->
+                    <div class="slide first">
+                        <img src="./image/slideshow/01.1-Mobile-Trang-Chu-Version-01.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./image/slideshow/1566375726229.jpeg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./image/slideshow/image.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="./image/slideshow/startup_3.jpg" alt="">
+                    </div>
+                    <!-- slide image end -->
+                    <!-- automatic navigation start -->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>   
+                    </div>
+                    <!-- automatic navigation end -->
+                </div>
+                <!-- manual navigation start -->
+                <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+            </div>
+        
+        </section>
+    </header>
+    <section class="successful-stories">
+        <h2>Typical successful stories</h2>
+        <p>From ideas turned into carefully crafted pixels and problems crafted into solutions.</p>
+        <div></div>
+    </section>
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function() {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if(counter > 4){
+                counter = 1;
+            }
+        },5000)
+    </script>
+</body>
+</html>
