@@ -10,14 +10,14 @@
     align-items: center;
     align-content: center;
     width: 100%;
-    flex-direction: column;
 }
-.header-center{
+.header .header-center{
     margin: 0 auto;
     list-style: none;
-    display:flex;}
+    display:flex;
+}
 
-.menu{
+.header .menu{
     margin-top: 25px;
     list-style: none;
     display:flex;
@@ -26,47 +26,122 @@
     font-size: 14px
 }
 
-.menu li {
+.header .menu li {
     margin: 10px;
     text-transform:uppercase;
     font-weight: 500;
     transition: 0.3s;
 }
-.menu a{
+.header .menu a{
     display: block;
     text-align: center;
     text-decoration: none;
 }
-.menu li:hover{
+.header .menu li:hover{
     color:rgb(27, 164, 206);
     cursor: pointer;
 }
-.header .text-box{
-    color: #fff;
-    margin: 0 auto;
-    :
-    
+.header #open_Menu{
+    display:none;
 
 }
-.btn{
-    font-family: 'Cabin';
-    background-color:rgb(255, 149, 10);
+
+.icon-menu{
+    margin-left: 10px;
+}
+#menuMobile{
+    display:none;
+}
+#close_Menu{
+    display:none;
+}
+.text-box{
     color: #fff;
-    padding: 12px 34px;
+    margin: 0 auto;
+    position: absolute;
+    display: flex;
+    left:35%;
+    justify-content: center;
+    border-radius: 3px;
+    bottom: 20%;
+    padding:10px;
+    background-color:rgb(255, 149, 10);
+}
+.text-box .btn{
+    font-family: 'Cabin';
+    color: #fff;
+    padding: 5px 20px;
     font-size: 24px;
     font-weight: 700;
-    border-radius: 3px;
     transition: 0.5s;
 }
-/* ----------Successful Storeis-------- */
-.successful-stories{
-    margin-top: 30px;
-    text-align: center;
-}
-.successful-stories p{
-    margin-top: 10px;
-}
+@media (max-width: 640px) 
+{ 
+    .header{
+        background: #15939a;
+        display:flex;
+        width: 100%;
+        position:relative;
+
+    }
+    .header .menu{
+        display:none;
+    } 
+    .logo img{
+        height:35px;
+        width:55px;
+        margin-top: 10px;
+        margin-left: -25px;
+    }
+    .icon-menu{
+        font-size:25px;
+        color: #fff;
+
+    }
+    .header #open_Menu{
+        display:block;
+
+    }
+    #menuMobile{
+        display:none;
+        left:0;
+        margin-top: 9px;
+        position:absolute;
+        font-size:14px;
+        width: 100%;
+        background-color: #fff;
+    }
+    #menuMobile li{
+        /* border: 0.5px solid #fff; */
+        list-style: none;
+        color: #15939a;
+        padding: 15px 23px;
+        background-color: #fff;
+        text-transform: uppercase;
+        font-weight: 500;
+
+
+    }
+    #menuMobile li:hover{
+        background-color: #15939a;
+        color: #111;
+
+    }
+    #close_Menu{
+        display:none;
+    }
+    .text-box{
+        left: 5%;
+        bottom: 40%;
+    }
+    .text-box .btn{
+        font-size: 15px;
+    }
+} 
+/* --------Slidebar------------------------------*/ 
 .slide-show{
+    overflow: hidden;
+
     margin:0;
     padding:0;
     height: 100vh;
@@ -77,7 +152,7 @@
 .slider{
     width: 100%;
     height: 100%;    
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .slides{
     width: 500%;
@@ -94,6 +169,14 @@
 .slide img{
     width: 100%;
     height:100%;
+
+}
+@media(max-width:630px){
+    .slide img{
+        object-fit: cover;
+
+    }
+     
 }
 /* css for maunal slide navigation */
 .navigation-manual{
@@ -157,4 +240,61 @@
 #radio4:checked ~ .navigation-auto .auto-btn4{
     background: #40D3DC
 }
+@media (max-width: 640px) {
+    .navigation-manual{
+        left: 35%;
+    }
+    .manual-btn:not(:last-child){
+        margin-right: 20px;
+    }
+    .navigation-auto
+    {
+        left: 35%;
+        margin-top: 740px;
+    }
+    .navigation-auto div:not(:last-child){
+        margin-right: 20px;
+    }
+    
+}
+/* ----------Successful Storeis-------- */
+/* .responsive-image{
+    width: 100%;
+    height: auto;
+} */
+.successful-stories{
+    margin-top: 50px;
+    text-align: center;
+}
+.successful-stories p{
+    margin-top: 10px;
+
+}
+.successful-contents{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+}
+.successful-content{
+    width: 270px;
+    border:1px solid #111;
+}
+.successful-content img{
+    width: 100%;
+    height:100%
+}
+.successful-content + .successful-content{
+    margin-left: 30px;
+}
+@media (max-width: 640px) {
+    .successful-contents{
+        flex-direction: column;
+        justify-content: center;
+
+    }
+     
+}
+
 

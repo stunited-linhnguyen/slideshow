@@ -1,24 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Siler</title>
+    <title>ST United</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&display=swap" rel="stylesheet"></head>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
+
 <body>
     <!-- image silder start -->
     <header class="">
         <section class="header">
+            <div class="icon-menu">
+                <i onclick="openMenu()" id="open_Menu" class="fa-solid fa-bars"></i>
+                <i onclick="closeMenu()" id="close_Menu" class="fa-solid fa-bars"></i>
+                <div id="menuMobile">
+                    <ul>
+                        <li>Home</li>
+                        <li>What we do</li>
+                        <li>Who we are</li>
+                        <li>Portfolio</li>
+                        <li>Join us</li>
+                        <li>Let's talk</li>
+                    </ul>
+                </div>
+            </div>
             <div class="header-center">
+
                 <div class="logo">
                     <img src="./image//slideshow/stunited-e15650013362301.png" alt="STUnited" width="150px"
                         height="100px">
@@ -35,13 +55,14 @@
                         <li><a>Let'stalk</a></li>
                     </ul>
                 </div>
-    
-            </div>
-            <div class="text-box">
-                <a class="btn">Collaborate to kick-start your software project</a>
+
             </div>
 
         </section>
+        <div class="text-box">
+            <a class="btn">Collaborate to kick-start your software project</a>
+        </div>
+
         <section class="slide-show">
             <div class="slider">
                 <div class="slides">
@@ -53,24 +74,27 @@
                     <!-- radio buttons end -->
                     <!-- slide image start -->
                     <div class="slide first">
-                        <img src="./image/slideshow/01.1-Mobile-Trang-Chu-Version-01.png" alt="">
+                        <img class="responsive-image" src="./image/slideshow/01.1-Mobile-Trang-Chu-Version-01.png"
+                            alt="" width="600" height="400">
                     </div>
                     <div class="slide">
-                        <img src="./image/slideshow/1566375726229.jpeg" alt="">
+                        <img class="responsive-image" src="./image/slideshow/1566375726229.jpeg" alt="" width="600"
+                            height="400">
                     </div>
                     <div class="slide">
-                        <img src="./image/slideshow/image.jpg" alt="">
+                        <img class="responsive-image" src="./image/slideshow/image.jpg" alt="" width="600" height="400">
                     </div>
                     <div class="slide">
-                        <img src="./image/slideshow/startup_3.jpg" alt="">
+                        <img class="responsive-image" src="./image/slideshow/startup_3.jpg" alt="" width="600"
+                            height="400">
                     </div>
-                    <!-- slide image end -->
+                    <!-- end -->slide image
                     <!-- automatic navigation start -->
                     <div class="navigation-auto">
                         <div class="auto-btn1"></div>
                         <div class="auto-btn2"></div>
                         <div class="auto-btn3"></div>
-                        <div class="auto-btn4"></div>   
+                        <div class="auto-btn4"></div>
                     </div>
                     <!-- automatic navigation end -->
                 </div>
@@ -82,23 +106,52 @@
                     <label for="radio4" class="manual-btn"></label>
                 </div>
             </div>
-        
+
         </section>
     </header>
     <section class="successful-stories">
         <h2>Typical successful stories</h2>
         <p>From ideas turned into carefully crafted pixels and problems crafted into solutions.</p>
-        <div></div>
+        <div class="successful-contents"">
+            <div class=" successful-content">
+                <img class="successful-image" src="./image/sucessfulStore/Capture.png">
+
+            </div>
+            <div class="successful-content">
+                <img class="successful-image" src="./image/sucessfulStore/2e-jycg6_400x400.jpg">
+            </div>
+            <div class="successful-content">
+                <img class="successful-image" src="./image/sucessfulStore/figure01.jpg">
+
+            </div>
+            <div class="successful-content">
+                <img class="successful-image" src="./image/sucessfulStore/image-logo-1.png">
+
+            </div>
+        </div>
     </section>
     <script type="text/javascript">
         var counter = 1;
-        setInterval(function() {
+        setInterval(function () {
             document.getElementById('radio' + counter).checked = true;
             counter++;
-            if(counter > 4){
+            if (counter > 4) {
                 counter = 1;
             }
-        },5000)
+        }, 5000)
+        function openMenu() {
+            var menu = document.getElementById('menuMobile').style.display = 'block';
+            var close = document.getElementById('close_Menu').style.display = 'block';
+            var open = document.getElementById('open_Menu').style.display = 'none';
+
+        }
+        function closeMenu() {
+            var menu = document.getElementById('menuMobile').style.display = 'none';
+            var open = document.getElementById('open_Menu').style.display = 'block';
+            var close = document.getElementById('close_Menu').style.display = 'none';
+
+        }
     </script>
 </body>
+
 </html>
